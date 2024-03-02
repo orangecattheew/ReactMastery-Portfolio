@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model Basics</title>
+  </head>
+  <body>
+    <h1>getElementById</h1>
+    <p>
+      This is the most basic method where we get element by id and perform the
+      operation
+    </p>
+
+    <h1>getElementByTagName('tagname')</h1>
+    <p>
+      Allows us to select element based on the tag name <br />
+      gives us html collection as a result so we cannnot use array methods
+    </p>
+    <p>
+      we can convert html collection to array using spread operator
+      [...htmlcollectionName]
+    </p>
+    <ul>
+      <li>apple</li>
+      <li>orange</li>
+      <li>banana</li>
+      <li>grape</li>
+    </ul>
+
+    <br />
+    <button id="btn">button1</button>
+
+    <h1>getElementsByClassName</h1>
+    <p>similar to get element by tagname here we also get html collection</p>
+    <ul>
+      <li class="special">pineapple</li>
+      <li class="special last">cocoa</li>
+    </ul>
+    <h1>
+      querySelector('any css') -selects single
+      <br />
+      querySelectorAll('any css') -selects all and gives and array
+    </h1>
+    <p>preferable the most goto methods of using document objects Model</p>
+
+    <p>
+      here i have ol list of element that i will be using query selector all
+    </p>
+    <ol>
+      <li>home</li>
+      <li>escape</li>
+      <li>power</li>
+      <li>capslock</li>
+    </ol>
+
+    <h1>Navigating/Traversing the DOM</h1>
+    <div id="Traverse_theDOM">
+      <ol class="Navigating_the_DOM">
+        <li>child nodes</li>
+        <li>children</li>
+        <li>firstchild</li>
+        <li>lastChild</li>
+      </ol>
+
+      <ol>
+        ParentElement:
+        <p class="ParentElement">
+          we can use .parentElement to traverse the dom ,<br />in this case we
+          go from bottom to top
+        </p>
+      </ol>
+
+      <ol>
+        <li class="li123">previous sibling</li>
+        <li class="li123">next sibling</li>
+        <li class="li123">previous sibling1</li>
+        <li class="li123">next sibling1</li>
+        <li class="li123">previous sibling2</li>
+        <li class="li123">next sibling2</li>
+      </ol>
+
+      <h1>nextElementSibling</h1>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
