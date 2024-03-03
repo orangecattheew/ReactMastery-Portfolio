@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <style>
+        /* Define a color */
+        .color {
+          color: #3983b492; /* You can replace this with any color code */
+        }
+  
+        /* Define a text class */
+        .text {
+          font-size: 18px;
+          font-family: Arial, sans-serif;
+          font-weight: bold;
+        }
+
+        .font-arial {
+            font-family: Arial, sans-serif;
+        }
+
+        .font-times {
+            font-family: 'Times New Roman', serif;
+        }
+
+        .font-courier {
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Define a text class with different styles */
+        .text-normal {
+            font-weight: normal;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+
+        .text-italic {
+            font-style: italic;
+        }
+
+        .font-gothic {
+            font-family: 'Century Gothic', sans-serif;
+        }
+
+        .font-garamond {
+            font-family: 'Garamond', serif;
+        }
+
+      </style>
+    <ul>
+      Day2 Revision
+      <li>nodeValue</li>
+      <li>textContent</li>
+      <li>getAttribute()</li>
+      <li>setAttribute()</li>
+      <li>className</li>
+      <li>classList</li>
+      <li>createElement('element')</li>
+      <li>createTextNode('text content')</li>
+      <li>element.appendChild(childElement)</li>
+      <li>insertBefore(element,element to insertBefore)</li>
+      <li>replaceChild(new,old)</li>
+      <li>remove(element)</li>
+      <li>removeChild(element)</li>
+      <li>innerHTML</li>
+      <li>textContent</li>
+    </ul>
+
+    <ul>
+        Day2 Revision
+        <h1>
+          <li>nodeValue</li>
+          <li>textContent</li>
+        </h1>
+        
+        <div class="nodeValue_1"></div>
+        <div class="textcontent_1">Lorem ipsum dolor sit amet.</div>
+        
+        <br>
+    
+        <h1>
+          <li>getAttribute()</li>
+          <li>setAttribute()</li>
+        </h1>
+        <div class="getAttribute_1 color">getAttribute_1</div>
+        <div class="setAttribute_1">setAttribute_1</div>
+        
+        <br>
+        
+        <h1>
+          <li>className</li>
+          <li>classList</li>
+        </h1>
+        
+        <div id="className_first">class name practice</div>
+        <div id="classList_first">class list practice</div>
+        
+        <br>
+        <h1>
+          <li>createElement('element')</li>
+          <li>createTextNode('text content')</li>
+          <li>element.appendChild(childElement)</li>
+        </h1>
+        
+        <div class="createElement_1">create_element</div>
+        
+        <br>
+
+        <h1>
+        <li>insertBefore(element,element to insertBefore)</li>
+        </h1>
+        <div class="insertBefore">
+        <div class="elementToInsertBefore">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+        </div>
+        <br>
+
+        <h1>
+        <li>replaceChild(new,old)</li>
+        <li>elementToRemove.remove()</li>
+        <li>removeChild(element)</li>
+        <li>textContent</li>
+      </h1>
+
+        <div>
+          <div class="toReplaceChild">
+            <div class="divToReplace">divToReplace Lorem, ipsum.</div>
+          </div>
+          <br>
+          <div class="toRemove">toRemoveLorem ipsum, dolor sit amet consectetur adipisicing elit. Porro reprehenderit non soluta laboriosam labore ut sed est ipsa molestias modi.</div>
+          <br>
+          <div class="toRemoveChild">
+            to remove child element
+            <li>alpha</li>
+            <li>beta</li>
+            <li>sigma</li>
+          </div>
+
+        </div>
+        <br>
+        <h1>
+        <li class="innerHTML">innerHTML</li> 
+        </h1>
+      </ul>
+    </body>
+<script src="day2_revision.js"></script>
+  </body>
+</html>
