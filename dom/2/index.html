@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="special">textContent and Nodevalue</h1>
+    <p>
+      both are essentially the same and provide us the text content of a
+      particular node.
+    </p>
+
+    <h1>
+      // getAttribute()
+      <br />
+      // setAttribute()
+    </h1>
+    <ul>
+      <li class="first">one</li>
+      <li class="first">two</li>
+      <li class="first">three</li>
+      <li class="first">four</li>
+      <li class="first">five</li>
+
+      <li class="last">last1</li>
+      <li class="last">last2</li>
+      <li class="last">last3</li>
+      <li class="last">last4</li>
+      <li class="last">last5</li>
+    </ul>
+
+    <h1>classList and className</h1>
+    <br />
+    <p>
+      className can provide us the className of selected elements <br />
+      we can also add a className to an element using this
+      <br />
+      classList can help us assign multiple classes to an element
+    </p>
+
+    <style>
+      /* Define a color */
+      .color {
+        color: #3498db; /* You can replace this with any color code */
+      }
+
+      /* Define a text class */
+      .text {
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+      }
+    </style>
+
+    <h6 id="first">I am the first element</h6>
+    <h6 id="second">I am the second element</h6>
+    <h6 id="third">I am the third element</h6>
+    <h6 id="fourth">I am the fourth element</h6>
+
+    <p>classlist is the preferred way for me to add classes</p>
+
+    <br />
+
+    <h1>
+      createElement('element') <br />createTextNode('text content')
+      <br />element.appendChild(childElement)
+      <br />insertBefore('element','location') <br />replaceChild('new','old')
+      <br />prepend <br />innerText
+    </h1>
+    <p>
+      here element is the element we want to insert and location is the element
+      before which we want to insert the element
+    </p>
+
+    <div class="insertBefore">
+      insertBefore
+      <ul>
+        <li class="insertBefore_first">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+
+    <h6 class="replaceChildOld">replaceCHildOld</h6>
+
+    <h6 class="prepend">
+      prepend:opposite of appendChild
+
+      <br />here we want to append the value before a particular element
+    </h6>
+
+    <h1>
+      //remove
+      <br />
+      //removeChild
+    </h1>
+
+    <div class="remove_remove_child_practice">
+      <ul>
+        <li>remove childElement</li>
+      </ul>
+    </div>
+    <script src="day2.js"></script>
+  </body>
+</html>
