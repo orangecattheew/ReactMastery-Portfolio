@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Events in Javascript</h1>
+    <button class="btn">click me</button>
+    <br />
+    <button class="btn2">click me</button>
+
+    <!-- mouse events -->
+    <h2>mouse events</h2>
+    <button class="btn3">click me</button>
+
+    <h3>
+      // Key Events
+      <br />
+      // keypress-when key is pressed
+      <br />
+      // keydown-when key is down
+      <br />
+      // keyup-when key is released
+    </h3>
+
+    <input type="text" class="keypress_1" placeholder="keypress" />
+    <input type="text" class="keydown_1" placeholder="keydown" />
+    <input type="text" class="keyup_1" placeholder="keyup" />
+
+    <br />
+
+    <h4>
+      <li>Event Object argument e,evt</li>
+      <li>info about triggered event</li>
+      <li>event type</li>
+      <li>event.currentTarget</li>
+      <li>this keyword</li>
+      <li>preventDefault()=prevents default behaviour</li>
+    </h4>
+
+    <h5>Event Object argument e,evt</h5>
+    <button class="btn4">click me</button>
+    <a href="index.html" id="link">link</a>
+
+    <h6>
+      // current Target:
+      <br />
+      // current target always referes to the element to which the event handler
+      has been attached to
+      <br />
+      // target -identifies the element on which the event occured
+    </h6>
+    <p class="my_target">sampledata</p>
+    <p class="my_target">sampledata<strong> current target </strong></p>
+    <p class="my_target">sampledata</p>
+
+    <br />
+    <p class="my_target_2">sampledata</p>
+    <p class="my_target_2">sampledata<strong> target </strong></p>
+    <p class="my_target_2">sampledata</p>
+    <script src="app.js"></script>
+  </body>
+</html>

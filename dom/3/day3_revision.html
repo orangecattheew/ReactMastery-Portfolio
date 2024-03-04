@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Day3 Revision</title>
+  </head>
+  <body>
+    <ul>
+      <li>Events in Javascript</li>
+      <li>select element</li>
+      <li>add event listener()</li>
+      <li>what event ,what to do</li>
+      <li>function reference</li>
+      <li>
+        adding callback function as a reference instead of directly adding it
+      </li>
+      <li>
+        here is changeColors function we are referencing it and not adding ()
+        immediately
+      </li>
+      <li>
+        otherwise it will be used by event listener immediately before the event
+        has happened
+      </li>
+      <li>so then on even only that function that is referenced is used</li>
+
+      <li>mouse events</li>
+      <li>click-fires after full action occurs</li>
+      <li>mousedown-button is pressed</li>
+      <li>mouseup-button is released</li>
+      <li>mouseenter-moved onto an element</li>
+      <li>mouseleave-moved out of an element</li>
+      <li>Key Events</li>
+      <li>keypress-when key is pressed</li>
+      <li>keydown-when key is down</li>
+      <li>keyup-when key is released</li>
+      <li>Event Object argument e,evt</li>
+      <li>info about triggered event</li>
+      <li>event type</li>
+      <li>event.currentTarget</li>
+      <li>this keyword</li>
+      <li>preventDefault()=prevents default behaviour</li>
+      <li>current Target:</li>
+      <li>
+        current target always referes to the element to which the event handler
+        has been attached to
+      </li>
+      <li>target -identifies the element on which the event occured</li>
+    </ul>
+
+    <div class="element1">This is DAy3_revision</div>
+    <div class="element2">
+      Topics to revise are listed <strong>above</strong>
+    </div>
+    <div class="element3">
+      We will be studying addEventListener then <em>target</em> and current
+      target
+    </div>
+
+    <input type="text" id="keydown" placeholder="keydown" />
+    <input type="text" id="keypress" placeholder="keypress" />
+    <input type="text" id="keyup" placeholder="keyup" />
+
+    <script src="day3_revision.js"></script>
+  </body>
+</html>
