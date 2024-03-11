@@ -72,3 +72,66 @@ const menu = [
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
 ];
+
+const section_center = document.querySelector(".section-center");
+const btn_container = document.querySelector(".btn-container");
+
+window.addEventListener("DOMContentLoaded", function () {
+  // console.log(e.currentTarget.dataset.id);
+  btn_container.innerHTML = displayButtons(menu);
+  section_center.innerHTML = displayItems(menu);
+  dynamicFilterFunctionality();
+});
+
+function displayButtons(menuItems) {
+  const btn = menuItems.reduce(extractUniqueCategories, ["all"]);
+  const btn_category = btn.map(function (item) {
+    return `<button type="button" class="filter-btn" data-id="${item}">${item}</button>`;
+  });
+
+  return btn_category.join("");
+}
+
+function displayItems(menuItems) {
+  const menu_item = menuItems
+    .map(function (item) {
+      return `<article class="menu-item">
+          <img src="${item.img}" alt="${item.title}" class="photo" />
+          <div class="item-info">
+            <header>
+              <h4>${item.title}</h4>
+              <h4 class="price">${item.price}</h4>
+            </header>
+            <p class="item-text">
+             ${item.desc}
+            </p>
+          </div>
+        </article>`;
+    })
+    .join("");
+
+  return menu_item;
+}
+
+const extractUniqueCategories = (categories, item) => {
+  if (!categories.includes(item.category)) {
+    categories.push(item.category);
+  }
+  return categories;
+};
+
+function dynamicFilterFunctionality() {
+  const filter_btn = document.querySelectorAll(".filter-btn");
+  filter_btn.forEach((item) =>
+    item.addEventListener("click", function (e) {
+      const category = e.currentTarget.dataset.id;
+      const filtered_menu = menu.filter((item) => item.category === category);
+
+      if (filtered_menu.length == 0) {
+        section_center.innerHTML = displayItems(menu);
+      } else {
+        section_center.innerHTML = displayItems(filtered_menu);
+      }
+    })
+  );
+}
