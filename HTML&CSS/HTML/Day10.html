@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="day10_style.css" />
+    <title>Document Object Model</title>
+  </head>
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <img src="preloader.gif" alt="preloader" class="preloader__item" />
+    </div>
+
+    <h1>Javascript Revision</h1>
+    <ul>
+      <a href="#nodeValue"><li>nodeValue</li></a>
+      <a href="#textContent"> <li>textContent</li></a>
+      <a href="#getAttribute"> <li>getAttribute()</li></a>
+      <a href="#setAttribute"> <li>setAttribute()</li></a>
+      <a href="#className"> <li>className</li></a>
+      <a href="#classList"> <li>classList</li></a>
+      <a href="#createElement"> <li>createElement('element')</li></a>
+      <a href="#createTextNode"> <li>createTextNode('text content')</li></a>
+      <a href="#appendChild"> <li>element.appendChild(childElement)</li></a>
+      <a href="#insertBefore">
+        <li>insertBefore(element,element to insertBefore)</li></a
+      >
+      <a href="#replaceChild"> <li>replaceChild(new,old)</li></a>
+      <a href="#remove_element"> <li>remove(element)</li></a>
+      <a href="#removeChild"> <li>removeChild(element)</li></a>
+      <a href="#innerHTML"> <li>innerHTML</li></a>
+      <a href="#textContent"> <li>textContent</li></a>
+
+      <a href="#events_in_javascript">
+        <h1><li>Events in Javascript</li></h1></a
+      >
+      <li>select element</li>
+      <li>add event listener()</li>
+      <li>what event ,what to do</li>
+      <li>
+        function reference
+        <ul>
+          <li>
+            adding callback function as a reference instead of directly adding
+            it
+          </li>
+          <li>
+            otherwise it will be used by event listener immediately before the
+            event has happened
+          </li>
+          <li>so then on even only that function that is referenced is used</li>
+        </ul>
+      </li>
+
+      <a href="#mouse_events">
+        <h1><li>mouse events</li></h1></a
+      >
+      <li>click-fires after full action occurs</li>
+      <li>mousedown-button is pressed</li>
+      <li>mouseup-button is released</li>
+      <li>mouseenter-moved onto an element</li>
+      <li>mouseleave-moved out of an element</li>
+      <a href="#key_events">
+        <h1><li>Key Events</li></h1></a
+      >
+      <li>keypress-when key is pressed</li>
+      <li>keydown-when key is down</li>
+      <li>keyup-when key is released</li>
+      <li>Event Object argument e,evt</li>
+      <li>info about triggered event</li>
+      <li>event type</li>
+      <li>event.currentTarget</li>
+      <li>this keyword</li>
+      <li>preventDefault()=prevents default behaviour</li>
+      <li>current Target:</li>
+      <li>
+        current target always referes to the element to which the event handler
+        has been attached to
+      </li>
+      <li>target -identifies the element on which the event occured</li>
+      <h1>Event Propagation - Bubbling - Capturing</h1>
+
+      <h1><li>Web Storage API</li></h1>
+      <li>session storage,local storage</li>
+      <li>setItem,getItem,removeItem,clear</li>
+      <li>
+        both session and local storage work the same but the difference is,
+      </li>
+      <li>if we close the browser session the data will be gone</li>
+      <li>
+        but for local storage this data can remain in different browser session
+        as well
+      </li>
+      <li>localStorage.setItem("name_of_the_key", "value");</li>
+      <li>sessionStorage.setItem("name_of_the_key", "value2");</li>
+      <li>
+        json.stringify() :Very helpfull when working with array and local
+        storage
+      </li>
+      <li>json.parse()</li>
+    </ul>
+    <div>
+      <h5>setTimeout- runs function once after specific time</h5>
+      <ul>
+        <li>-pass function reference</li>
+        <li>-duration in ms(1000ms = 1 second)</li>
+        <li>-default 0,will cover more extensively in async/wait section</li>
+        <li>-returns unique identifier</li>
+        <li>-clearTimeout to cancel</li>
+        <li>-on window object</li>
+      </ul>
+      <h5>setInterval-runs function repeatedly at specific intervals</h5>
+      <ul>
+        <li>-pass function reference</li>
+        <li>-duration in ms(1000ms)</li>
+        <li>-default 0</li>
+        <li>-returns unique identifier</li>
+        <li>-clear Interval to cancel</li>
+      </ul>
+      <p>
+        The <strong>DOMContentLoaded</strong> event fires when the initial HTML
+        document has been completely loaded and parsed, without waiting for
+        stylesheets,image.and subframes to finish loading.
+      </p>
+
+      <strong
+        ><p>
+          window.addEventListener('DOMContentLoaded',function(){});
+        </p></strong
+      >
+
+      <p>
+        The load event is fired when the whole page has loaded including all the
+        dependent resources suc as stylesheets and images.this is in contrast to
+        DOMContentLoaded,which is fired as soon as the [age DOM has been loaded
+        without waiting for resources to finish loading
+      </p>
+
+      <strong><p>window.addEventListener('load',function(){})</p></strong>
+
+      <ul>
+        <li>
+          innerWidth : the read only window property the interior width of the
+          window in pixels
+        </li>
+        <li>
+          innerHeight : the read only property of the window interface returns
+          the interior height of the window in pixels
+        </li>
+      </ul>
+      <p>
+        The <strong>element.getBoundingClientRect()</strong> method returns a
+        DOMObject providing information about the size of an element and its
+        position relative to the viewport.
+      </p>
+    </div>
+
+    <h1>***</h1>
+    <h5 id="nodeValue">nodeValue</h5>
+    <p>This can we used to assign value to a specific node</p>
+    <div class="nodevalue_div">
+      <p></p>
+    </div>
+
+    <h1>***</h1>
+
+    <h5 id="textContent">textContent</h5>
+    <p>similar to node value but using this we can directly set textContent</p>
+
+    <div class="textContent_div"></div>
+
+    <h1>***</h1>
+
+    <h5 id="getAttribute">getAttribute()</h5>
+    <p>
+      By the help of this we can get details regarding an attribute of an HTML
+      tag
+    </p>
+
+    <div class="getAttribute_example_div">get attribute of this div</div>
+
+    <h1>***</h1>
+
+    <h5 id="setAttribute">setAttribute()</h5>
+    <p>we can also setAttribute of any element using this property</p>
+
+    <div class="setAttribute_example_div">
+      I have applied class attribute on this using setAttribute
+    </div>
+    <h1>***</h1>
+
+    <h5 id="className">className</h5>
+    <ul>
+      <li>We can set className for an element using this</li>
+      <li>
+        we can also get information regarding classes available in an element
+        using this
+      </li>
+    </ul>
+
+    <div class="className_example_div">
+      <p>Applying multiple classes to this div</p>
+    </div>
+
+    <h1>***</h1>
+
+    <h5 id="classList">classList</h5>
+    <p>
+      similar to className but we can apply classes using classList,this has
+      better syntax imo <br />
+      we can both add and remove classes using this.
+    </p>
+
+    <div class="classList_example">
+      <p>I am applying multiple classes to this div using classList</p>
+    </div>
+    <h1>***</h1>
+
+    <h5 id="createElement">createElement('element')</h5>
+    <div class="createElement_example_div">
+      I will be creating multiple elements in this
+    </div>
+
+    <h1>***</h1>
+
+    <h5 id="createTextNode">createTextNode('text content')</h5>
+
+    <div class="createTextNode_example_div">
+      Here i will change the text value
+    </div>
+
+    <h1>***</h1>
+
+    <h5 id="appendChild">element.appendChild(childElement)</h5>
+    <p>
+      We can append the elemetn that we created to any other element using this
+    </p>
+    <h1>***</h1>
+
+    <h5 id="insertBefore">insertBefore(element,element to insertBefore)</h5>
+    <p>
+      Similar to append but opposite, here we can specify the element we want
+      the other element to be added before
+    </p>
+
+    <div class="insertBefore_example">
+      <p></p>
+      Above element I have added with insertBefore
+    </div>
+
+    <h1>***</h1>
+
+    <h5 id="replaceChild">replaceChild(new,old)</h5>
+    <p>We can use this to replaceChild element using this</p>
+
+    <div class="replaceChild_example_div">
+      <div>this div is going to be replaced</div>
+    </div>
+
+    <h1>***</h1>
+
+    <h5 id="remove_element">element.remove()</h5>
+    <p>Using this we can remove the element we want</p>
+    <h1>***</h1>
+
+    <h5 id="removeChild">element.removeChild(element2)</h5>
+    <p>using this we can remove the child element</p>
+    <h1>***</h1>
+
+    <h5 id="innerHTML">innerHTML</h5>
+    <p>Using this we can add complete HTML CODE</p>
+
+    <div class="innerHTML_example">Example</div>
+
+    <h1>***</h1>
+    <h1>***</h1>
+
+    <h1 id="events_in_javascript"><li>Events in Javascript</li></h1>
+    <h1 id="mouse_events"><li>mouse events</li></h1>
+
+    <li>mousedown-button is pressed</li>
+    <li>mouseup-button is released</li>
+    <li>mouseenter-moved onto an element</li>
+    <li>mouseleave-moved out of an element</li>
+    <button class="btn_mouse_events btn">mouse event</button>
+
+    <h1>***</h1>
+    <h1 id="key_events"><li>Key Events</li></h1>
+    <li>keypress-when key is pressed</li>
+    <li>keydown-when key is down</li>
+    <li>keyup-when key is released</li>
+
+    <input type="text" class="keypress" />
+    <input type="text" class="keydown" />
+    <input type="text" class="keyup" />
+
+    <h1>***</h1>
+    <h1 id="event_object"><li>Event Object argument e,evt</li></h1>
+    <li>info about triggered event</li>
+    <li>event type</li>
+    <li>event.currentTarget</li>
+    <li>this keyword</li>
+    <li>preventDefault()=prevents default behaviour</li>
+    <li>current Target:</li>
+    <li>
+      current target always referes to the element to which the event handler
+      has been attached to
+    </li>
+    <li>target -identifies the element on which the event occured</li>
+    <button id="scrollBtn" class="scroll-btn">
+      <img src="arrow-up-solid.svg" alt="scrollBtn" />
+    </button>
+
+    <script src="day10_app.js"></script>
+  </body>
+</html>

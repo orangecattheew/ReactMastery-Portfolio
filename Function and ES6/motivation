@@ -1,0 +1,43 @@
+There are so many languages and frameworks. LinkedIn and Twitter are filled with diverse opinions and advice for young engineers. There are debates around DSA vs development, backend vs frontend, OOP or no OOP.
+
+It can be too much to process for someone just getting into the world of tech.
+
+The cherry on top - there are only a limited number of jobs. Resume selection in itself is a huge mountain. As a college student, you are expected to have internships, projects, extracurriculars and a 90 percentile CGPA.
+
+How can someone not feel like giving up? My suggestion: Focus on TODAY. Pick ONE language + ONE framework.
+
+Everything else, the concepts and logic can be implemented in other languages with some syntax tweaks.
+
+If you are confused about which language to pick, some of the most popular options are:
+
+Java + SprinBoot
+
+Python + Django
+
+Ruby + Rails (reach out to me if you aren't sure which language is best suited for you)
+
+After working with some of the best in the field, I realised that longevity comes down to two things primarily (of course, it is an oversimplification, but hear me out) -
+
+Curiosity
+
+Consistency
+
+Plan for today.
+
+Make a commitment that 'I will learn {insert a programming concept, eg: HashMap} today'.
+
+Don't overcommit. Start small.
+
+Make incremental progress. Remember the famous maths: 1.01^365 >>> 0.99^365.
+
+Check if you are good on your promise when you end your day. If not, the day hasn't ended for you.
+
+This is the consistency part.
+
+Don't just try to solve the problem. Know the fundamentals - what are they used for? What can we do with the concepts? Who invented them? What was the motivation behind the invention?
+
+Let's take an example of a queue - it's FIFO (first in first out). Think of the big billion days on Flipkart. There are 100 phones on sale and 1000 concurrent buyers. How would you avoid double sale of the same item?
+
+This is the curiosity part.
+
+Lastly, try not to fall into the trap of comparing your journey with someone else. You don't know the full context. If you are trying your best, that's good enough. Looking at everything at once can and will make you anxious.

@@ -1,0 +1,12 @@
+Functions
+
+IFFE
+Hoisting
+closures
+
+IIFE Immediately invoked function expression:
+older approach - new modules
+simple approach to avoid global scope pollution
+good way at protecting the scope of your function and variables within Immediately
+global namespace extra steps
+
