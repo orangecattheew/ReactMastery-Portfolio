@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mongodb_issues</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="issue1_faced">
+        <h4>mongod.service failed with result 'exit-code'</h4>
+        <p></p>
+        <ol>
+          <li>
+            Firstly, stop mongodb if you restarted: <br />
+            <em> sudo systemctl stop mongod </em>
+          </li>
+          <li>
+            Next, I detected the database corruption: <br />
+            <em> sudo mongod --repair --dbpath /var/lib/mongodb</em>
+          </li>
+          <li>
+            Run commands: <br />
+            <em
+              >chown -R mongodb:mongodb /var/lib/mongodb <br />
+              chown mongodb:mongodb /tmp/mongodb-27017.sock</em
+            >
+          </li>
+          <li>Finally: <em>sudo systemctl start mongod</em></li>
+        </ol>
+
+        <h4>
+          mongod.service: Main process exited, code=exited,
+          status=2/INVALIDARGUMENT
+        </h4>
+        <ol>
+          <li>sudo gedit /etc/mongod.conf</li>
+          <li>Check proper spaces are given and file follows correct format</li>
+          <li>Issue resolved</li>
+          <li>
+            <p>
+              The issue was <br />
+              "security: <br />
+              authorization: enabled" <br />
+              I did not give space after ':'
+            </p>
+          </li>
+        </ol>
+      </div>
+      <footer>
+        <a href="mongodb.html">MongoDB</a> <br />
+        <a href="../index.html">Back To Homepage</a>
+      </footer>
+    </div>
+  </body>
+</html>

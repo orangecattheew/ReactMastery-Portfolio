@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li::before {
+  content: "📄 ";
+  color: #555;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MongoDB CREATE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="CREATE">
+        <h1>CREATE</h1>
+        <p>There is no command to create new database</p>
+        <p>Database will be created together with first collection</p>
+
+        <p>
+          Note:In below examples replace collection name variable with your
+          collection Name
+        </p>
+        <ol>
+          <li>Change active Database</li>
+          <li>use database_name</li>
+          <li>create new collection</li>
+          <li>db.createCollection("collection_name")</li>
+          <li>SHow collections</li>
+          <li>Delete collection</li>
+          <li>db.getcollection("collection_name").drop()</li>
+          <li>db.collection_name.drop()</li>
+        </ol>
+
+        <h4>Insert methods</h4>
+        <ul>
+          <li>
+            Insert one or Many documents(returns writeResult or BultWrite
+            results)
+          </li>
+          <li>db.collection_name.insert(object or array_of_objects)</li>
+          <li>Insert one(returns id of the inserted document)</li>
+          <li>db.collection_name.insert(object )</li>
+          <li>Insert Many documents(returns ids of the inserted documents)</li>
+          <li>db.collection_name.insert(array_of_objects)</li>
+        </ul>
+        <p>
+          db.collection_name.find() provides us the info of data inserted in it
+        </p>
+
+        <h6>example json</h6>
+        <pre>
+        NOTE:I have used pre tag of HTML here, that does not format the data inside it and displays test as it has been pasted by the user.
+        {
+          "stringExample": "Hello, World!",
+          "numberExample": 42,
+          "objectExample": {
+            "name": "John",
+            "age": 30,
+            "city": "New York"
+          },
+          "arrayExample": ["John", "Anna", "Peter"],
+          "booleanExample": true,
+          "nullExample": null
+        }
+
+      </pre
+        >
+        <h6>example BSON</h6>
+        <pre>
+          {
+            "stringField": "Hello, world!",
+            "booleanField": true,
+            "integerField": 42,
+            "doubleField": 3.14,
+            "arrayField": [1, 2, 3],
+            "embeddedDocument": {
+              "nestedString": "Nested value",
+              "nestedArray": [true, false]
+            },
+            "binaryData": BinData(0, "SGVsbG8gd29ybGQh"), // Base64-encoded binary data
+            "dateField": ISODate("2024-03-26T13:50:39Z"),
+            "objectIdField": ObjectId("615f9e5f6c7a9d001f3b5c7a"),
+            "nullField": null
+          }
+
+          </pre
+        >
+
+        <p>
+          Note: If we try to insert thee data with already existing ObjectID
+          <strong>WITHIN A SAME COLLECTION</strong>
+          <br />
+          we will get a moongoservererror: E11000 duplicate key error
+          collection: myDb.second index: _id_ dup key: { _id:
+          ObjectId('6602d6d35a2d41ba79bd4ad1') }
+          <br />
+          similar to one above.
+        </p>
+
+        <p>
+          So in <strong>different collection or database</strong> we can have
+          same object_id as one in another collection
+        </p>
+
+        <p>
+          SO basically we have 3 methods to insert data in mongodb collection:
+          insert,insertOne,InsertMany <br />
+          Inside the same collection we can not insert another object with same
+          _id
+          <br />
+          aslo when using db.collection_name.insertMany([we have to pass in
+          array of objects, we cannot pass object directly])
+        </p>
+      </div>
+      <footer>
+        <a href="mongodb.html">MongoDB</a> <br />
+        <a href="mongodb_read.html">MongoDB READ</a> <br />
+        <a href="../index.html">Back To Homepage</a>
+      </footer>
+    </div>
+  </body>
+</html>

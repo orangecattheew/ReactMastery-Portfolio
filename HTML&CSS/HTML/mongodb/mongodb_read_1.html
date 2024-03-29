@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MongoDB: Document Reading and Manipulation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="read">
+        <h1>READ</h1>
+        <ul>
+          <li>Find Documents</li>
+          <li>Find One Document</li>
+        </ul>
+      </section>
+
+      <section class="cursor">
+        <h2>Cursor in MongoDB</h2>
+        <p>
+          Cursors are used to efficiently iterate over database query results
+          without loading the entire dataset into memory at once. They represent
+          a server-side pointer to a query result set.
+        </p>
+        <p>
+          <strong>Batch Size:</strong> This controls the number of documents
+          MongoDB sends to the client in each network round trip. Adjusting the
+          batch size can optimize performance and network utilization.
+        </p>
+        <p>
+          <em>Note:</em> The "iterator size" concept more accurately refers to
+          how a client application iterates through documents in a batch, which
+          is managed through cursor methods rather than a fixed size.
+        </p>
+
+        <h3>Adjusting Cursor Behavior</h3>
+        <h4>Modifying Batch Size in Application Code</h4>
+        <p>
+          In application code, use the
+          <code>cursor.batchSize(number)</code> method to control the number of
+          documents MongoDB returns per batch.
+        </p>
+        <p>Example:</p>
+        <pre><code>const cursor = db.collection('yourCollection').find().batchSize(100);
+cursor.forEach(
+    doc => {
+        console.log(doc);
+    },
+    err => {
+        console.error(err);
+    }
+);</code></pre>
+
+        <p>
+          For MongoDB shell adjustments, <code>DBQuery.shellBatchSize</code> is
+          deprecated. Instead, use
+          <code>config.set("displayBatchSize", number)</code> to set the number
+          of documents displayed in the shell per batch.
+        </p>
+
+        <h3>Common Cursor Methods</h3>
+        <p>Here are some commonly used cursor methods in MongoDB:</p>
+        <ul>
+          <li>
+            <code>next()</code> - Fetches the next document in the cursor.
+          </li>
+          <li>
+            <code>hasNext()</code> - Checks if there is a next document to
+            fetch.
+          </li>
+          <li>
+            <code>toArray()</code> - Converts the cursor to an array of
+            documents.
+          </li>
+          <li>
+            <code>forEach(callback)</code> - Iterates over each document in the
+            cursor, executing a callback function.
+          </li>
+        </ul>
+      </section>
+
+      <section class="cursor-operations">
+        <h3>Cursor Iterator Methods</h3>
+        <p>Let <strong>cursor</strong>=db.collection_name.find(args);</p>
+        <p>cursor.next()</p>
+        <pre>
+let cursor=db.third.find({})
+cursor.next()
+{ _id: ObjectId('6602e1945a2d41ba79bd4ad3'), index: 1 }
+cursor.next()
+{ _id: ObjectId('6602e1945a2d41ba79bd4ad4'), index: 2 }
+cursor.next()
+{ _id: ObjectId('6602e1945a2d41ba79bd4ad5'), index: 3 }
+cursor.hasNext()
+true
+cursor.objsLeftInBatch()
+97
+            </pre
+        >
+
+        <h3>Using toArray() and forEach() with Cursor</h3>
+        <h3>
+          Using count(), limit(number), skip(number), and sort({key:value})
+        </h3>
+        <p><code>db.collection_name.find({}).count()</code></p>
+        <p><code>db.collection_name.find({}).limit(5)</code></p>
+        <p>
+          <code>db.collection_name.find({}).skip(5)</code> - Retrieves documents
+          starting from index 6.
+        </p>
+        <p>
+          <code>db.collection_name.find({}).sort({index:1})</code> - Sorts in
+          ascending order.
+        </p>
+        <p>
+          <code>db.collection_name.find({}).sort({index:-1})</code> - Sorts in
+          descending order.
+        </p>
+        <pre>
+// Using the below code, I can have 100 documents in an array.
+let many_documents = [];
+function insert_documents(i) {
+    return { index: i };
+}
+for (let i = 0; i < 101; i++) {
+    many_documents.push(insert_documents(i));
+}
+            </pre
+        >
+
+        <footer>
+          <a href="mongodb.html">MongoDB</a> <br />
+          <a href="../index.html">Back To Homepage</a>
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>

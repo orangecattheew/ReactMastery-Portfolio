@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>MongoDB READ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="READ">
+        <h1>READ</h1>
+
+        <ul>
+          <li>Find Documents</li>
+          <li>Fine One Document</li>
+        </ul>
+        <h2>CURSOR</h2>
+        <p>used to retrieve document from MongoDB Server</p>
+        <p>There is a different between batch size and iterator size</p>
+        <p>
+          When we run a query we will get a batch of documents and we will
+          iterate over that batch of document
+        </p>
+
+        <strong
+          ><p>
+            Batch Size tells us how many documents will be sent from MongoDB
+            Server to MongoDB Client In one Shift
+          </p></strong
+        >
+        <em
+          ><p>
+            Iterator size tells us how we iterate through the documents that are
+            already present in the MongoDB Client
+          </p></em
+        >
+
+        <h4>So How do we change Iterator and Batch size?</h4>
+        <h5>Changing the iterator Size</h5>
+        <p>
+          DBQuery.shellBatchSize is deprecated and you need to use another
+          command instead of this called config.set("displayBatchSize").
+        </p>
+        <p>config.set("displayBatchSize", 300)</p>
+
+        <p>
+          Note from my understanding as of now, cursor is basically a client
+          collection where the batch of data is being retrieved and then later
+          we can iterate through those
+        </p>
+
+        <h4>Cursor Iterator Methods</h4>
+        <p>let <strong>cursor</strong>=db.collection_name.find(args);</p>
+        <p>cursor.next()</p>
+
+        <pre>
+        let cursor=db.third.find({})
+        cursor.next()
+        { _id: ObjectId('6602e1945a2d41ba79bd4ad3'), index: 1 }
+        cursor.next()
+        { _id: ObjectId('6602e1945a2d41ba79bd4ad4'), index: 2 }
+        cursor.next()
+        { _id: ObjectId('6602e1945a2d41ba79bd4ad5'), index: 3 }
+        cursor.hasNext()
+        true
+        cursor.objsLeftInBatch()
+        97
+        </pre>
+        <p>
+          This cursor guys seems very important, this is the type of object we
+          can iterate over
+        </p>
+        <h4>using toArray() and forEach() with cursor</h4>
+        <h4>using count(),limit(number),skip(number) and sort({key:value})</h4>
+        <p>db.collection_name.find({}).count()</p>
+        <p>db.collection_name.find({}).limit(5)</p>
+        <p>
+          db.collection_name.find({}).skip(5) : we will get documents starting
+          from index 6
+        </p>
+        <p>
+          db.collection_name.find({}).sort({index:1}) :: sort will be ascending
+        </p>
+        <p>
+          db.collection_name.find({}).sort({index:-1}) :: sort will be
+          descending
+        </p>
+        <pre>
+        
+        #Using the below code i can have 100 documents in an array.
+        let many_documents = [];
+        function insert_documents(i) {
+          return { index: i };
+          }
+            for (let i = 0; i < 101; i++) {
+          many_documents.push(insert_documents(i));
+        }
+        </pre>
+
+        <h4>Chaining several helper methods</h4>
+        <p>db.cursor.find({}).limit(10).skip(15).sort({index:-1})</p>
+        <p>
+          What is the predence or these helper methods? <br />
+          first sort will be run,then skip, then limit so what will happen if we
+          change the order?
+          <br />
+          <strong
+            >IT DOESNT MATTER IF YOU CHANGE THE ORDER-> THE EXECUTION PRECEDENCE
+            WILL ALWAYS BE SORT-> SKIP ->limit
+            <br />db.cursor.find({}).limit(10).skip(15).sort({index:-1}) <br />
+            db.cursor.find({}).skip(15).sort({index:-1}).limit(10) <br />
+            both above will give same results
+          </strong>
+        </p>
+        <p>
+          What will happen if you use count methods at the end? <br />
+          db.cursor.find({}).skip(15).sort({index:-1}).limit(10).count()????
+          <br />
+          Answer: count always looks for what is inside find({}) so it will
+          result result as per that only,suppose there are 100 documents it will
+          give 100 count regardless of how many methods are chained
+        </p>
+        <pre>
+        db.third.find({}).limit(8).sort({index:1}).skip(65).forEach(item=>print(`Document with _id ${item._id} has index ${item.index}`))
+        Document with _id 6602e1945a2d41ba79bd4b14 has index 66
+        Document with _id 6602e1945a2d41ba79bd4b15 has index 67
+        Document with _id 6602e1945a2d41ba79bd4b16 has index 68
+        Document with _id 6602e1945a2d41ba79bd4b17 has index 69
+
+        db.third.find({}) is a cursor
+      </pre
+        >
+      </div>
+
+      <footer>
+        <a href="mongodb.html">MongoDB</a> <br />
+        <a href="mongodb_create.html">Create</a> <br />
+        <a href="../index.html">Back To Homepage</a>
+      </footer>
+    </div>
+  </body>
+</html>
