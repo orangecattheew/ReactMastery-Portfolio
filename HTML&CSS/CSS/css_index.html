@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cascading Style Sheets</title>
+
+    <!-- Google font -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Rubik+Scribble&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!-- Google font -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <section class="section_1">
+        <h1></h1>
+        <div class="types_of_css">
+          There are several ways to apply CSS styles to HTML elements:
+
+          <!-- In-line css -->
+          <h1 style="color: red">This is in-line css</h1>
+          <!-- Internal css -->
+          <style>
+            h1.in-line {
+              color: aqua;
+              font-size: 25px;
+            }
+            h2.in-line {
+              color: yellow;
+              font-size: 60px;
+            }
+          </style>
+          <h1 class="in-line">This is Internal css</h1>
+          <h2 class="in-line">This is also Internal css</h2>
+          <!-- External css -->
+          <h1>This is external css</h1>
+          <h3>This is External CSS</h3>
+        </div>
+        <div class="div_and_span">
+          <h1>Div and Span</h1>
+          <p>DIV is used for gropuping multiple elements</p>
+          <p>Span is used for grouping in-line content</p>
+
+          <div class="first_div">
+            <h1>Heading 1</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              aliquid eum nobis necessitatibus rerum velit ut aut iste dolor
+              nihil iusto officia, optio cumque debitis suscipit expedita
+              praesentium tempore deleniti facilis voluptas nostrum illo nam
+              totam. Ducimus id numquam molestias quidem nobis. Illum at
+              pariatur tempora veniam in fuga commodi, omnis nihil officiis
+              numquam assumenda quasi adipisci mollitia est molestias. Odio
+              vitae consectetur veritatis porro commodi assumenda fuga qui
+              similique quidem vero! Facilis ipsa distinctio nulla nesciunt,
+              quae voluptatum odit! Eum reiciendis eligendi repellat
+              repellendus, consequuntur voluptas accusantium veniam non, et
+              nihil,
+              <span class="sample1">
+                sapiente debitis dolores quasi. Modi tempora</span
+              >
+              repellat rem culpa deserunt laudantium eveniet sunt nemo, ea vel
+              ipsam voluptatum, recusandae consectetur rerum! Consequatur quae
+              repudiandae quaerat dolor. Reiciendis earum ab voluptas ipsum
+              eligendi, optio ratione delectus dolor nobis totam ullam?
+              Perspiciatis eius sint sit ducimus, voluptatibus aut optio
+              tempore, id facilis sed porro excepturi error. Ipsum inventore
+              obcaecati est temporibus recusandae. Fugit cum rem, doloremque
+              repellat nobis repudiandae laboriosam maiores sunt! Iste fugit
+              neque assumenda id nostrum ipsam doloremque modi amet, maxime
+              voluptates quia perferendis odio quos nesciunt aliquid voluptas
+              quod culpa nobis dolorum placeat blanditiis mollitia rerum.
+              Eveniet est fuga placeat nobis nulla obcaecati harum, explicabo
+              qui quidem.
+            </p>
+          </div>
+          <div class="second_div">
+            <h1>Heading 2</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              aliquid eum nobis necessitatibus rerum velit ut aut iste dolor
+              nihil iusto officia, optio cumque debitis suscipit expedita
+              praesentium tempore deleniti facilis voluptas nostrum illo nam
+              totam. Ducimus id numquam molestias quidem nobis. Illum at
+              pariatur tempora veniam in fuga commodi, omnis nihil officiis
+              numquam assumenda quasi adipisci mollitia est molestias. Odio
+              vitae consectetur veritatis porro commodi assumenda fuga qui
+              similique quidem vero! Facilis ipsa distinctio nulla nesciunt,
+              quae voluptatum odit! Eum reiciendis eligendi repellat
+              repellendus, consequuntur voluptas accusantium veniam non, et
+              nihil, sapiente debitis dolores quasi. Modi tempora repellat rem
+              culpa deserunt
+              <span class="sample2">laudantium eveniet sunt nemo, ea vel</span>
+              ipsam voluptatum, recusandae consectetur rerum! Consequatur quae
+              repudiandae quaerat dolor. Reiciendis earum ab voluptas ipsum
+              eligendi, optio ratione delectus dolor nobis totam ullam?
+              Perspiciatis eius sint sit ducimus, voluptatibus aut optio
+              tempore, id facilis sed porro excepturi error. Ipsum inventore
+              obcaecati est temporibus recusandae. Fugit cum rem, doloremque
+              repellat nobis repudiandae laboriosam maiores sunt! Iste fugit
+              neque assumenda id nostrum ipsam doloremque modi amet, maxime
+              voluptates quia perferendis odio quos nesciunt aliquid voluptas
+              quod culpa nobis dolorum placeat blanditiis mollitia rerum.
+              Eveniet est fuga placeat nobis nulla obcaecati harum, explicabo
+              qui quidem.
+            </p>
+          </div>
+
+          <p>DIV is going to be used a lot for grouping elements.</p>
+        </div>
+        <div class="inheritance_in_css">
+          <h1>Inheritance in css</h1>
+          <p>
+            Child elements will inherit properties from parent element unless
+            the Child has its own specific set of properties defined in CSS
+          </p>
+
+          <div class="inheritance_example">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              molestias velit fugit ipsam, fugiat voluptates consequatur at
+              beatae ut recusandae?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              molestias velit fugit ipsam, fugiat voluptates consequatur at
+              beatae ut recusandae?
+            </p>
+            <p class="inheritance_example_child">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              molestias velit fugit ipsam, fugiat voluptates consequatur at
+              beatae ut recusandae?
+            </p>
+          </div>
+        </div>
+        <div class="Last_rule_and_specificity">
+          <h1>Last rule and Specificity and universal selector</h1>
+          <p>
+            Last rule is going to be incharge of my style sheet, What it means
+            is suppose i set a property and then at later point of sheet i give
+            it some different value, so what will happen is the last one will be
+            applied
+          </p>
+          <h4 class="last_rule_example">Last_rule_example</h4>
+          <pre>
+.last_rule_example {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 500;
+}
+
+.last_rule_example {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}  </pre
+          >
+          <h1>Universal Selector</h1>
+          <p>
+            * is the univeral selector and we assign properties to all elements
+            if we just did
+          </p>
+          <pre>
+*{
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: aliceblue;
+  color: blue;  
+}     </pre
+          >
+        </div>
+
+        <div class="fundamentals_project">
+          <h1><a href="Fundamental_Project.html">Fundamentals_project</a></h1>
+        </div>
+        <hr class="section-divider" />
+      </section>
+      <section class="section_2">
+        <h1>CSS COLORS</h1>
+        <ul>
+          <li>color,background-color,background</li>
+          <li>color names</li>
+          <li>rgb,rgba</li>
+          <li>hex</li>
+        </ul>
+
+        <div class="color_and_background_color">
+          <h1>color and background-color</h1>
+          <p>color property will control the color of the element</p>
+          <p>
+            background-color property will control the background-color of the
+            element
+          </p>
+        </div>
+
+        <div class="rgb_rgba">
+          <h1>RGB AND RGBA</h1>
+
+          <h4>RGB</h4>
+          <h5>RGBA</h5>
+          <p>rgba allows us some transparency/opacity</p>
+        </div>
+        <a href="colors_project.html">colors_project</a>
+        <hr class="section-divider" />
+      </section>
+      <section class="section_3">
+        <h1>UNITS</h1>
+        <ul>
+          <li>Absolute,Relative</li>
+          <li>
+            Pixels
+            <ul>
+              <li>absolute values,one dot on the screen</li>
+              <li>font-size size of the font</li>
+              <li>width - width of the element</li>
+              <li>height - height of the elemet</li>
+            </ul>
+          </li>
+          <li>
+            percentage_units
+            <ul>
+              <li>
+                Percent units are relative units and they do depend on the
+                parent
+              </li>
+            </ul>
+          </li>
+          <li>
+            em,rem
+            <ul>
+              <li>
+                em,rem units are relative units and they do depend on the parent
+              </li>
+              <li>Relative,depends on parent</li>
+              <li>1em- 16px default browser style</li>
+              <li>1em=base value(16px)*number(1) = 16px</li>
+              <li>1em=base value(16px)*number(2) = 32px</li>
+              <li>Base value may change depending on Parent</li>
+              <li>1em=base value(10px)*number(2) = 20px</li>
+              <li>rem depends on the root</li>
+              <li>1 rem=base valeu(16px)*number(1)=16px</li>
+            </ul>
+          </li>
+
+          <li>
+            vw,vh
+            <ul>
+              Viewport Units
+              <li>vh -height - percent of the screen</li>
+              <li>vw -width - percent of the screen</li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="percentage_units">
+          <h1>Percentage Units</h1>
+
+          <div class="outer_Percentage_units">
+            outer div
+            <div class="inner_Percentage_units">inner div</div>
+          </div>
+        </div>
+        <a href="units_project.html">units_project</a>
+        <hr class="section-divider" />
+      </section>
+      <section class="section_4">
+        <h1>Typography</h1>
+        <ul>
+          <li>Properties</li>
+          <li>Font-stack,generic Fonts</li>
+          <li>google fonts</li>
+        </ul>
+
+        <h2>font-family</h2>
+        <pre>
+          body{
+            font-family:"Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+          }
+        </pre>
+        <h2>font-stack generic fonts</h2>
+        <p>
+          What happens if the user computer or device does not have the font
+          that you have set for your project?
+        </p>
+        <p>
+          Answer: We can set multiple font family to avoid such case, a kind of
+          fallback system
+        </p>
+        <p>
+          <strong
+            >generic font family are
+            :serif,sans-serif,cursive,fantasy,monospace</strong
+          >
+        </p>
+        <pre>
+{#This fallback system is very usefull as it allows us many options
+          font-family: 'Courier New', Courier, monospace;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-family: 'Times New Roman', Times, serif;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-family: cursive
+            }</pre
+        >
+
+        <h1>Google Fonts</h1>
+        <div class="google_fonts_example">
+          <h2>Google Font Example</h2>
+          <pre>
+
+Add the below code in head            
+&lt;!-- Google font --&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Roboto&amp;family=Rubik+Scribble&display=swap" rel="stylesheet"/&gt; 
+
+Add the below properties in css        
+.google_fonts_example {
+  font-family: "Rubik Scribble", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+or we can use this import option is css file then have all styling in css file only
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik+Scribble&display=swap')
+</pre
+          >
+        </div>
+
+        <div class="text_properties">
+          <h1>Text Properties</h1>
+          <ul>
+            <li>Line Height</li>
+            <li>Letter spacing</li>
+            <li>Word Spacing</li>
+            <li>Text Transform</li>
+            <li>Text-decoration</li>
+          </ul>
+
+          <div class="Line_height_example">
+            <h4>Line_height_example</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptatum non, veniam repudiandae animi qui iure sequi illum
+              voluptatem officia rem. Nam ratione similique excepturi, nesciunt
+              facilis aliquam harum error culpa. Illum voluptas maxime, nihil
+              quia, neque eum harum rem a deleniti nobis perferendis sapiente,
+              repudiandae iusto quaerat. Dolorum, vero quos.
+            </p>
+          </div>
+        </div>
+        <div class="Letter_Spacing_Example">
+          <h4>Letter_Spacing_Example</h4>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+            totam explicabo ratione provident commodi nostrum praesentium quis
+            recusandae voluptates atque, illo culpa sint delectus accusantium
+            adipisci nobis. Illum, quas ipsum corrupti, architecto perferendis
+            ipsa, consequatur magni voluptatum voluptate inventore cumque odio.
+            Harum nesciunt facere magnam ut labore sequi assumenda quam!
+          </p>
+        </div>
+
+        <div class="Word_Spacing_Example">
+          <h4>Word_Spacing_Example</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at
+            corrupti magni, debitis voluptas nihil omnis doloribus unde quam
+            perspiciatis quod voluptatibus veniam, dolorum perferendis et ipsam
+            iure delectus. Perspiciatis rerum placeat ea vel unde dicta alias,
+            soluta exercitationem repellat vitae laudantium ex error iure eum.
+            Illo nostrum aliquam deleniti.
+          </p>
+        </div>
+
+        <div class="text_transform_example">
+          <h4>text_transform_example</h4>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim
+            impedit quos est voluptas veritatis placeat sint, iste facere nemo
+            molestias quo obcaecati nisi totam laudantium amet ad, sit quibusdam
+            nulla odio corrupti cumque rem perferendis excepturi? Alias at,
+            minima molestias laborum corporis dolorem odio vel consequatur quos
+            excepturi nesciunt sapiente.
+          </p>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+              similique adipisci porro ab, rem odio ipsam hic tenetur
+              dignissimos libero? Quos libero a velit? At corporis quod maxime
+              veritatis debitis?
+            </li>
+          </ul>
+        </div>
+
+        <div class="text_decoration">
+          <h4>text_decoration</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Reiciendis, a illo! Dolor esse facere iste vel dignissimos, dolorem
+            porro, autem consequuntur quisquam mollitia et quod est atque
+            pariatur corrupti ipsam? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Atque possimus, itaque commodi vero delectus
+            nihil, beatae in totam debitis, tempore incidunt voluptas quia
+            repudiandae temporibus velit facere! Totam voluptate qui fugit ex
+            illo libero hic ducimus magnam a aut vero quidem explicabo eos
+            saepe, amet, quia aspernatur architecto assumenda culpa.
+          </p>
+        </div>
+        <hr class="section-divider" />
+      </section>
+      <section class="section_5">
+        <h1>CSS Box Model</h1>
+
+        <img src="css_box_model.jpeg" width="670" height="auto" />
+
+        <div class="box_model">
+          <h1>CSS Box Model</h1>
+          <p>
+            The CSS box model is a fundamental concept in web design and
+            development, which describes how the different parts of an HTML
+            element are measured and interact with each other. It consists of
+            margins, borders, padding, and the actual content.
+          </p>
+
+          <h2>1. Content</h2>
+          <p>
+            This is the area where your text and images appear. Its size can be
+            controlled using the width and height properties.
+          </p>
+
+          <h2>2. Padding</h2>
+          <p>
+            Padding is the space between the content and the border. It is
+            transparent and can vary in size.
+          </p>
+
+          <h2>3. Border</h2>
+          <p>
+            A border surrounds the padding (if any) and content. It can be
+            styled in various ways.
+          </p>
+
+          <h2>4. Margin</h2>
+          <p>
+            This is the outermost layer, surrounding the border. Margin is the
+            space between the element's border and its surrounding elements.
+          </p>
+
+          <p>
+            The CSS <code>box-sizing</code> property controls how the width and
+            height of elements are calculated. The two main values are:
+          </p>
+          <ul>
+            <li>
+              <strong>content-box:</strong> The default setting, where width and
+              height only include the content.
+            </li>
+            <li>
+              <strong>border-box:</strong> Width and height include content,
+              padding, and border, but not the margin.
+            </li>
+          </ul>
+
+          <p>
+            Understanding the CSS box model is essential for controlling layout,
+            designing responsive interfaces, and ensuring that elements are
+            displayed as intended across different browsers and devices.
+          </p>
+        </div>
+
+        <div class="border_examples">
+          <h1>Border:</h1>
+          <p>
+            A border surrounds the padding (if any) and content. It can be
+            styled in various ways.
+          </p>
+
+          <h2>OUTLINE</h2>
+        </div>
+        <a href="box_model_project.html">Box Model Project</a>
+        <hr class="section-divider" />
+      </section>
+
+      <section class="section_6">
+        <h1>Display Property</h1>
+        <ul>
+          <li>display</li>
+          <li>block</li>
+          <li>inline</li>
+          <li>inline block</li>
+          <li>box-sizing:border-box</li>
+        </ul>
+        <hr class="section-divider" />
+      </section>
+      <hr class="section-divider" />
+    </div>
+  </body>
+  <div id="scrollBtns">
+    <button onclick="scrollToBottom()">Scroll to Bottom</button>
+    <button onclick="scrollToTop()">Scroll to Top</button>
+  </div>
+  <script>
+    function scrollToBottom() {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    window.onload = function () {
+      scrollToBottom();
+    };
+  </script>
+</html>

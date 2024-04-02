@@ -1,0 +1,167 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #333;
+  /* text-transform: capitalize; */
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.first_div {
+  background-color: yellow;
+}
+.second_div {
+  background-color: beige;
+}
+
+.sample1,
+.sample2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: aliceblue;
+  color: blue;
+}
+
+.inheritance_example {
+  font-weight: 200;
+  background-color: yellow;
+  font-style: italic;
+}
+.inheritance_example_child {
+  background-color: aqua;
+}
+
+.last_rule_example {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 500;
+}
+
+.last_rule_example {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+.section-divider {
+  width: 100%;
+  height: 5px; /* Adjust height as needed */
+  background: linear-gradient(
+    to right,
+    #1f0a07,
+    #ffd700,
+    #7fffd4
+  ); /* Adjust gradient colors */
+  margin: 10px 0; /* Adjust margin as needed */
+}
+
+.color_and_background_color p {
+  background-color: bisque;
+  color: #a47ba6;
+  font-style: italic;
+}
+.rgb_rgba H4 {
+  font-weight: 200;
+  color: rgb(28, 132, 111);
+}
+.rgb_rgba H5 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: rgba(200, 180, 34, 0.832);
+  color: white;
+}
+
+.outer_Percentage_units {
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+}
+.inner_Percentage_units {
+  width: 50%;
+  height: 50%;
+  background-color: red;
+}
+
+.google_fonts_example {
+  font-family: "Rubik Scribble", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Line_height_example {
+  line-height: 2em;
+}
+
+.Letter_Spacing_Example {
+  letter-spacing: 5px;
+}
+
+.Word_Spacing_Example {
+  word-spacing: 5px;
+}
+
+.text_transform_example p {
+  text-transform: uppercase;
+}
+.text_transform_example ul {
+  text-transform: capitalize;
+}
+.text_decoration {
+  text-decoration: line-through;
+}
+
+.section_4 div h4 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: #ffd700;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+}
+
+.box_model {
+  width: 500px;
+  height: 800px;
+  background-color: red;
+  padding: 50px 50px;
+  margin: 100px;
+  border: 20px solid#ffd700;
+  font-size: medium;
+  overflow: scroll;
+}
+
+.border_examples {
+  padding: 5px;
+  border-bottom: 5px dashed red;
+}
+
+.border_examples H2 {
+  background-color: #a47ba6;
+  text-decoration: none;
+  outline: 5px dashed#ffd700;
+}
+
+#scrollBtns {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}

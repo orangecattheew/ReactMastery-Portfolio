@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="2024-April-03_style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="section_1">
+        <h1>Mongodb</h1>
+        <pre>
+   
+MongoDB Installation:
+      Setting up MongoDB is straightforward. 
+      Begin by visiting the MongoDB website to download the community server. 
+      The installation process varies depending on your operating system. 
+      For Linux users like myself, I use the command:
+      sudo dpkg -i mongodb-org-server_7.0.7_amd64.deb
+      However, for other operating systems, alternative installation methods are available.
+      To ensure the server is up and running, I check its status using:
+          sudo systemctl status mongod
+      To start or stop the server, I use:
+          sudo systemctl start mongod
+          sudo systemctl stop mongod
+
+      Creating a User:
+      Creating a user for MongoDB involves specifying a username, password, and associated roles. Here's an example:
+          db.createUser({
+              user: "user",
+              pwd: "pwd", // Consider using a password generator for enhanced security
+              roles: [
+                  { role: "readWrite", db: "myDb" },
+                  { role: "dbAdmin", db: "nyn" }
+              ]
+          })
+      After creating a user, login using the provided credentials.
+
+      MongoDB Queries:
+      MongoDB allows for complex queries using logical operators such as $and, $or, $gt, $gte, $lte, $ne, and $in.
+
+      Creating and Using Databases:
+      To create a database, you first need to add a collection to it. This can be done by executing:
+          use database_name
+      Remember, until a collection is added, the database won't persist beyond the current session. You can create a collection using:
+          db.createCollection("collection name")
+      Inserting Data:
+      To insert data into a collection, MongoDB provides two methods: insertOne() and insertMany(). For single documents, use:
+          db.collection_name.insertOne({})
+      For multiple documents, use:
+          db.collection_name.insertMany([{}])
+      These commands facilitate the insertion of data into your MongoDB databases.
+
+      Reading Data:
+      Reading data from MongoDB collections is straightforward and can be achieved through various methods.
+
+        </pre>
+      </div>
+
+      <div class="section_2">
+        <h1>CSS</h1>
+        <div class="apply_css">
+          <p>There are several ways to apply css styles to HTML ELEMENTS</p>
+
+          <h4 style="color: blue">THIS IS IN-LINE CSS</h4>
+          <style>
+            .INTERNAL_CSS {
+              color: red;
+              text-transform: uppercase;
+            }
+          </style>
+          <h4 class="INTERNAL_CSS">this is INTERNAL_CSS</h4>
+          <h4 class="EXTERNAL_CSS">this is External css</h4>
+        </div>
+        <div class="div_and_span">
+          <h1>Div and Span</h1>
+          <ul>
+            <li>DIV is used for gropuping multiple elements</li>
+            <li>Span is used for grouping in-line content</li>
+          </ul>
+
+          <div>
+            <h1>Heading 1</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem
+              labore tenetur blanditiis fugit alias, numquam sapiente? Accusamus
+              commodi excepturi fugit a saepe suscipit voluptas itaque hic et
+              deserunt laborum nobis, exercitationem repellat, fugiat eligendi
+              doloribus ea quos, recusandae in temporibus asperiores aspernatur.
+              Quisquam repellendus rerum ratione ipsum nisi veniam, adipisci
+              odio quos ipsam tempora culpa ex ipsa perferendis. In, ipsa.
+              Maiores voluptates omnis natus id asperiores rem laboriosam!
+              Distinctio dolore nam nostrum adipisci repellendus vel deleniti
+              quia placeat maxime odit sed error, provident necessitatibus
+              asperiores culpa porro? Deleniti, sapiente odio est eaque
+              doloremque fugit officia veniam vitae at beatae aut ullam possimus
+              tenetur cum quas, minima provident, voluptate impedit eius. Ad
+              dolorum eligendi soluta blanditiis odit quis corporis rerum
+              voluptatem amet explicabo natus voluptas nostrum quos maiores
+              vitae, voluptate delectus quidem nam. Quasi reprehenderit, error
+              quis necessitatibus non similique repellat magnam delectus saepe
+              voluptates tempora sint ipsam laborum ad voluptate, maiores
+              voluptatum quisquam ab in vitae quibusdam asperiores et accusamus.
+              <span
+                >Velit, autem beatae labore ipsum consectetur dicta doloribus
+                ut</span
+              >
+              debitis tenetur sequi dolore ea sit! Quod esse veniam iure iusto!
+              Aut animi illo quaerat rerum tenetur blanditiis iure esse, sint
+              tempora autem deleniti totam quod laborum, quidem minus! Vel,
+              vitae.
+            </p>
+          </div>
+
+          <div>
+            <h1>Heading 2</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+              consequuntur obcaecati nemo porro labore omnis eos accusantium
+              recusandae provident optio alias dolorum laboriosam, id unde iusto
+              mollitia hic aut? Consequatur, culpa? Deserunt, ex natus, incidunt
+              magni voluptatem vel omnis ut qui repudiandae perferendis
+              quibusdam nemo nostrum, velit ratione adipisci. Recusandae culpa
+              nisi voluptatibus. Harum officiis facere, delectus illo sapiente
+              natus doloremque necessitatibus nihil maiores illum, explicabo
+              repudiandae vel, nesciunt laborum omnis totam dolorum culpa vitae
+              possimus repellat veritatis corrupti excepturi. Rerum ducimus,
+              explicabo enim exercitationem distinctio, ipsam quaerat recusandae
+              reprehenderit impedit praesentium voluptas, delectus eveniet?
+              Optio aliquid voluptatem, suscipit laborum quos provident rem nisi
+              praesentium, voluptate, cumque tenetur tempore assumenda deleniti!
+              Eius ea quia doloremque, ipsam nostrum nulla, nisi veritatis sequi
+              laudantium tenetur quae omnis officia labore quod culpa
+              praesentium esse! Voluptatem expedita atque nihil illo? Porro, eum
+              consequatur. Eos necessitatibus iure maxime deleniti eius.
+              Distinctio facilis nesciunt a nam totam enim perferendis. Amet
+              porro esse deleniti alias, dolores culpa ex placeat vero earum
+              <span>
+                iste voluptatibus distinctio praesentium fugit. Autem
+                dicta</span
+              >
+              dignissimos facilis aut quod fuga eius nemo sunt ex veniam,
+              repellendus non recusandae rem voluptatem consequatur modi debitis
+              amet ratione praesentium expedita? Sed dolor tempora inventore
+              illo mollitia iure!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

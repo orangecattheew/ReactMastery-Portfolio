@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MongoDB Queries</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h4>Empty Query</h4>
+      <p>
+        db.collection_name.find({}) :: This is the Empty query and it will
+        result all the result available is the json file.
+      </p>
+      <h4>Equality Query:</h4>
+      <p>
+        db.collection_name.find({query}) :: Here if we want to find some data
+        equal to some value then we use equality query
+
+        <br />
+        Match by fieldName and its exact value
+        {fieldName:value1,fieldNAme2:value2,...}
+        <br />
+        This , comma between key-value pair means AND
+      </p>
+
+      <h1>{}</h1>
+      <h3>This is where we query data {}</h3>
+      <p>
+        we can query data and provide additional condition all to be done within
+        {}
+      </p>
+      <h2>Introduction to operators</h2>
+      <h3>Comparison operators</h3>
+      <ul>
+        <li>$eq</li>
+        <li>$gt</li>
+        <li>$lt</li>
+        <li>$ne</li>
+        <li>$gte</li>
+        <li>$lte</li>
+      </ul>
+      Example:
+      <br />
+      <pre>
+      {index:{"$eq":4}}
+      {index:{"$gt":4}}
+      {index:{"$lt":4}}
+      {index:{"$lte":4}}
+      {index:{"$gte":4}}
+
+      chaining multiple operator condition with and.
+      {index:{"$gte":4,"lte":20}}
+      </pre>
+
+      <h4>$in and $nin operators</h4>
+      <p>
+        These are in and not in operators, basically here we have to provide
+        values that are to be included or not included in the result in an array
+      </p>
+      <pre>
+        {index:{"$in":[5,6,7]}}
+        {index:{"$nin":[1,2,3]}}
+      </pre>
+      <h4>$and operator</h4>
+      <p>
+        Logically combines multiple conditions resulting documents must match
+        all conditions
+      </p>
+
+      <pre>
+        {$and:[{condition1},{condition2},{condition3},{condition4}]
+      </pre>
+
+      <h4>So what the difference between the , and _ and this $and?</h4>
+      <h4>Answer: Implicit and Explicit and</h4>
+      <h4>
+        Which one to use: Explicit and when querying the field with same name,
+        and Implicit and when querying the field with different name
+      </h4>
+      <p>
+        basically in implicit and , the first condition will get overwritten by
+        end
+      </p>
+      <p>
+        Example : db.collection_name.find({index:{"$ne":3},index:{"$gte":3}})
+        <br />
+        so we have given this condition and the value will get results with 3
+        also included.
+      </p>
+
+      <h4>$or Operator</h4>
+      <p>
+        This operator also combines multiple condition but query will look for
+        results maching any of those conditions
+      </p>
+      <pre>
+        {$or:[{condition1},{condition2},{condition3},{condition4}]
+
+        note:if we want to us or operator in fields with same name, its better to use $in operator
+      </pre>
+
+      <h3>Embedded documents: documents within document</h3>
+      <p>Nested Document: all you need to do is use . notation</p>
+      <p>Just like how we access value in objects</p>
+    </div>
+  </body>
+</html>

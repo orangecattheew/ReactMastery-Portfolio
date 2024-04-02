@@ -120,6 +120,12 @@
           Answer: count always looks for what is inside find({}) so it will
           result result as per that only,suppose there are 100 documents it will
           give 100 count regardless of how many methods are chained
+
+          <br />
+          <strong>
+            Note:THE ABOVE ANSWER MAYBE WRONG AS I TRIED IN IN LOCAL AND IT IS
+            GIVING ME COUNT EQUAL TO LIMIT</strong
+          >
         </p>
         <pre>
         db.third.find({}).limit(8).sort({index:1}).skip(65).forEach(item=>print(`Document with _id ${item._id} has index ${item.index}`))

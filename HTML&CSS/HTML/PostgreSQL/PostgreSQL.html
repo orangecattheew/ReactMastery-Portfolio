@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Install PostgreSQL on Ubuntu</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        color: #555;
+      }
+      code {
+        background-color: #f4f4f4;
+        padding: 2px 5px;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>How to Install PostgreSQL on Ubuntu</h1>
+    <p>Follow these steps to install PostgreSQL on Ubuntu:</p>
+    <ol>
+      <li>
+        <strong>Update Package Lists:</strong> Before installing, update your
+        local package index by running:
+      </li>
+      <code>sudo apt update</code>
+      <li>
+        <strong>Install PostgreSQL:</strong> Install PostgreSQL using the
+        following command:
+      </li>
+      <code>sudo apt install postgresql</code>
+      <li>
+        <strong>Verify Installation:</strong> Check the status of PostgreSQL
+        service:
+      </li>
+      <code>sudo systemctl status postgresql</code>
+      <li>
+        <strong>Access PostgreSQL:</strong> Access the PostgreSQL command-line
+        interface:
+      </li>
+      <code>sudo -u postgres psql</code>
+      <li><strong>Create a New User:</strong> Create a new PostgreSQL user:</li>
+      <code>CREATE USER <i>myuser</i> WITH PASSWORD '<i>mypassword</i>';</code>
+      <li>
+        <strong>Create a New Database:</strong> Create a new PostgreSQL
+        database:
+      </li>
+      <code>CREATE DATABASE <i>mydatabase</i> OWNER <i>myuser</i>;</code>
+      <li>
+        <strong>Exit PostgreSQL Prompt:</strong> Exit the PostgreSQL prompt:
+      </li>
+      <code>\q</code>
+    </ol>
+    <p>That's it! You have successfully installed PostgreSQL on Ubuntu.</p>
+  </body>
+</html>

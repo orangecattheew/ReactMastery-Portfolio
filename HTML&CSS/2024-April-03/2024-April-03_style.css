@@ -1,0 +1,45 @@
+/* Add your CSS styles here */
+
+code {
+  background-color: #f4f4f4;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.EXTERNAL_CSS {
+  color: brown;
+  text-transform: uppercase;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+}
+
+.div_and_span div {
+  height: 200px;
+  overflow: scroll;
+  border: 5px dashed red;
+  line-height: 2rem;
+  text-align: justify;
+  word-spacing: 15px;
+  letter-spacing: 2px;
+  font-family: "Rubik Scribble", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  padding: 20px 40px;
+  margin: 5px;
+}
+
+.div_and_span div p {
+  background-color: beige;
+}
+
+.div_and_span span {
+  background-color: blue;
+  color: antiquewhite;
+}
